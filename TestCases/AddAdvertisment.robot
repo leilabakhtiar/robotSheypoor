@@ -9,50 +9,54 @@ AddAdvertise
         Click Element       css:[class="button small icon-plus square-round"]
         Wait until page contains        ثبت آگهی
        Click Element       Xpath=//*[@id="item-form"]/div/div[1]/form/p[1]/a
-       sleep        5
+       wait until element is visible        css:[class="link colored t-cat-43626 icon-category-43626"]
 #      Click Element       Xpath=//*[@id="popup-categories"]/div/div[2]/div/ul/li[1]/span
         Click Element       css:[class="link colored t-cat-43626 icon-category-43626"]
-        Sleep       5
+        wait until element is visible        css:[class="link colored t-cat-43627"]
 
         Click Element        css:[class="link colored t-cat-43627"]
-        sleep       5
+        #
         Click Element       css:[class="link colored t-cat-43945"]
-        sleep       5
+        wait until element is visible        Xpath=//*[@id="item-form"]/div/div[1]/form/div[1]/p/a
 
 
 
         Click Element       Xpath=//*[@id="item-form"]/div/div[1]/form/div[1]/p/a
-        sleep       5
+
 
         Click Element       css:[class="icon-attr-445201"]
-        sleep       5
+        wait until element is visible       id=a68101
+
         Input Text      id=a68101     2000
         Input Text      id=a68102     3000
 
         Click Element       Xpath=//*[@id="item-form"]/div/div[1]/form/div[3]/p/a
-        sleep       5
+        wait until element is visible       css:[class="icon-attr-445243"]
 
         Click Element       css:[class="icon-attr-445243"]
-        sleep       5
 
+        wait until element is visible       Xpath=//*[@id="item-form"]/div/div[1]/form/div[4]/p/a
         Click Element       Xpath=//*[@id="item-form"]/div/div[1]/form/div[4]/p/a
-        sleep       5
+        wait until element is visible       css:[class="icon-attr-445308"]
 
         Click Element       css:[class="icon-attr-445308"]
-        sleep       5
+        SeleniumLibrary.Set Selenium Implicit Wait      10
+        SeleniumLibrary.Get Selenium Implicit Wait
+
+
         Scroll Page To Location     0       400
 
-      #  Wait Until Element is visible       Xpath=//*[@id="item-form"]/div/div[1]/form/div[6]/p/a
+         Wait Until Element is visible       Xpath=//*[@id="item-form"]/div/div[1]/form/div[6]/p/a
 
         Click Element       Xpath=//*[@id="item-form"]/div/div[1]/form/div[6]/p/a
-        sleep       5
+
 
         #here
         Click Element       css:[class="icon-attr-445317"]
         #Scroll Page To Location     0       350
-        sleep       5
+         wait until element is visible       id=item-form-title
         Input Text      id=item-form-title         آئودی A۵ مدل 2000 سفید
-        Sleep       5s
+        wait until element is visible       id=item-form-description
         Input Text      id=item-form-description      توضیحاتی مانند رنگ، نوع سوخت، نوع گیربکس، بیمه، نداشتن خط و رنگ، سال تولید، کارکرد، نوع سند، شرایط خرید و غیره  و
         Input Text      id=item-form-price        20000000
         Click Element       Xpath=//*[@id="item-form"]/div/div[1]/form/p[9]/a
@@ -63,13 +67,13 @@ AddAdvertise
 
 #       Click Element       Xpath=//*[@id="item-form"]/div/div[2]/div/div/div/div/div[2]
         Choose File         name=qqfile       C:/Users/sheypoor/Desktop/audi1.PNG
-        Sleep       7S
+         wait until element is visible       Xpath=//*[@id="item-form"]/div/div[2]/form/p[2]/button
         Click Element       Xpath=//*[@id="item-form"]/div/div[2]/form/p[2]/button
-
+         wait until element is visible       id=username
         Input Text      id=username       ${MobileNumber}
-        sleep       2s
+         wait until element is visible      Xpath=//*[@id="session"]/div/form/p[5]/button
         Click Element       Xpath=//*[@id="session"]/div/form/p[5]/button
-        sleep       5s
+
 
 
 
