@@ -13,10 +13,16 @@ TestDropDown
         sleep       3
       ##  Click Element       //*[@id="popup-locations"]/div/div[2]/div[2]/ul/li[4]/span
       ## making loop for all lis items in the province
-       FOR    ${INDEX}    IN RANGE    3   ${MAX}
+      ## Getting total number of provinces
 
-    click element       //*[@id="popup-locations"]/div/div[2]/div[2]/ul/li[${Index}]/span
-    Sleep       3
-    click Element       css:[class="link blue back icon-back"]
-        END
+       ${Count}     Get Element Count    //*[@id="popup-locations"]/div/div[2]/div[2]/ul
+       Log to console       ${Count}
+
+
+#       FOR    ${INDEX}    IN RANGE    3   ${MAX}
+#
+#    click element       //*[@id="popup-locations"]/div/div[2]/div[2]/ul/li[${Index}]/span
+#    Sleep       3
+#    click Element       css:[class="link blue back icon-back"]
+#        END
 
