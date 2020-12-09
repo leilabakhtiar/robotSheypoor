@@ -1,0 +1,8 @@
+1607514765742	geckodriver	INFO	Listening on 127.0.0.1:55043
+1607514768820	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sheypoor\\AppData\\Local\\Temp\\rust_mozprofileA1aQ8l"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607514771793	Marionette	INFO	Listening on port 55051
+1607514771968	Marionette	WARN	TLS certificate errors will be ignored for this session
