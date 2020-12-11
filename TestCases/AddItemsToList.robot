@@ -14,11 +14,11 @@ Login To Sheypoor And Get All Articles For Vehicles
     Maximize Browser Window
 
     Click element       css:[data-popup="popup-category-43626"]
-    Click element       //*[@id="popup-category-43626"]/div/ul/li[1]/a/span/strong
+    Click element       //*[@id="popup-category-43626"]//strong[text()='همه']
 
 Get Each Phone And Validate
 #Getting all articles and keep them in the elemnts list
-    ${elements}=    Get WebElements     //span[contains(@class,'button bordered square-round small icon-phone pull-right call flex-icon')]
+    ${elements}=    Get WebElements     //span[contains(@class,'icon-phone')] 
 #read each elemt's phone in elements list and validate the phone number
     FOR    ${element}    IN    @{elements}
           Click Element       ${element}

@@ -8,3 +8,17 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1607518120433	Marionette	WARN	TLS certificate errors will be ignored for this session
 1607675549495	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: https://www.sheypoor.com/js/app-ebfcf7b000.min.js, line 1: SyntaxError: JSON.parse: unexpected character at line 1 column 2 of the JSON data
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1607680111684	Marionette	INFO	Stopped listening on port 55545
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
