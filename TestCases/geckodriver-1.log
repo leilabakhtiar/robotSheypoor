@@ -50,3 +50,5 @@ console.error: services.settings:
   main/whats-new-panel Signature failed  TypeError: NetworkError when attempting to fetch resource.
 console.error: services.settings: 
   Message: TypeError: NetworkError when attempting to fetch resource.
+1607675549517	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
