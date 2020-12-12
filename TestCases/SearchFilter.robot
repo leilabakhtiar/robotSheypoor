@@ -13,4 +13,5 @@ Open sheypoor And Maximize Page
     Open Browser    https://www.sheypoor.com/    Firefox
     Maximize Browser Window
 Select Personals items in the search drop down
-    Click Element       //span[contains(text(),'همه گروه‌ها')]  
+    Click Element       //span[contains(text(),'همه گروه‌ها')]
+    Click Element       //*[@id="categories-expandable"]//strong[text()='لوازم شخصی']
