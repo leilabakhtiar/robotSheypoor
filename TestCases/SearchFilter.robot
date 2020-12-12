@@ -15,3 +15,5 @@ Open sheypoor And Maximize Page
 Select Personals items in the search drop down
     Click Element       //span[contains(text(),'همه گروه‌ها')]
     Click Element       //*[@id="categories-expandable"]//strong[text()='لوازم شخصی']
+    ${TotalCount}       Get Element Count        //*[@id="categories"]/div/ul/li
+    Log      ${TotalCount}
