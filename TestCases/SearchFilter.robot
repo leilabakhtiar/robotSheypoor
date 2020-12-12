@@ -17,3 +17,7 @@ Select Personals items in the search drop down
     Click Element       //*[@id="categories-expandable"]//strong[text()='لوازم شخصی']
     ${TotalCount}       Get Element Count        //*[@id="categories"]/div/ul/li
     Log      ${TotalCount}
+    FOR    ${INDEX}    IN RANGE    1   ${TotalCount}
+
+        Click Element    //*[@id="categories"]/div/ul/li[${INDEX}]/a/span[2]
+    END
