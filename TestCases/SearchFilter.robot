@@ -22,8 +22,17 @@ Select Personals items in the search drop down
     FOR      ${INDEX}    IN RANGE    1   ${TotalCount}
 
                  Click Element    //*[@id="categories"]/div/ul/li[${INDEX}]/a/span[2]
+
     # To check items prices are as per to the givrn range
     Input Text    id=mnp    ${MinPrice}
     Input Text   id=mxp    ${MaxPrice}
-
+    Loop To get all prices
     END
+
+    # get each article and test its price
+Loop To get all prices
+
+      ${Elements} =     Get WebElements    //strong[contains(@class,'item-price')]
+      FOR    ${Element}    IN    ${Elements}
+          Log     ${Element}
+      END
