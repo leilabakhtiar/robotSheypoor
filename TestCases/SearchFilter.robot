@@ -36,9 +36,10 @@ Loop To get all prices
     ${FirstItemPrice}=    Get Text   css:[class="item-price"]
     Log  ${FirstItemPrice}
     ${ItemPriceElements}=     Get WebElements    css:[class="item-price"]
+    Set Global Variable      ${ItemPriceElements}
     ${PricesLeng}=    Get Length    ${ItemPriceElements}
     Log  ${PricesLeng}
-      FOR    ${ItemPriceElement}    IN    ${ItemPriceElements}
+      FOR    ${ItemPriceElement}    IN    @{ItemPriceElements}
               ${eachPrice}=    Get Text    ${ItemPriceElement}
           Log  ${eachPrice}
       END
