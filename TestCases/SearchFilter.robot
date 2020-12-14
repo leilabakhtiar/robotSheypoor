@@ -26,13 +26,19 @@ Select Personals items in the search drop down
     # To check items prices are as per to the givrn range
     Input Text    id=mnp    ${MinPrice}
     Input Text   id=mxp    ${MaxPrice}
+    sleep  3s
     Loop To get all prices
     END
 
     # get each article and test its price
 Loop To get all prices
 
-      ${Elements} =     Get WebElements    //strong[contains(@class,'item-price')]
-      FOR    ${Element}    IN    ${Elements}
-          Log     ${Element}
+    ${FirstItemPrice}=    Get Text   css:[class="item-price"]
+    Log  ${FirstItemPrice}
+    ${ItemPriceElements}=     Get WebElements    css:[class="item-price"]
+    ${PricesLeng}=    Get Length    ${ItemPriceElements}
+    Log  ${PricesLeng}
+      FOR    ${ItemPriceElement}    IN    ${ItemPriceElements}
+              ${eachPrice}=    Get Text    ${ItemPriceElement}
+          Log  ${eachPrice}
       END
