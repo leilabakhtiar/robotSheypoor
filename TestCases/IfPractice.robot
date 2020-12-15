@@ -4,12 +4,9 @@ Library  SeleniumLibrary
 
 *** Test Cases ***
 IfPracticing
-    Run Keyword If      10>5   Number is correct
-    ...  ELSE   Number is incorect
+    Run Keyword If      2>5  Number is correct
+    ...   ELSE   raise Exception("Fail")
+
 
 
 *** Keywords ***
-Number is correct
-    Log  pass
-Number is incorect
-    Log  fail
