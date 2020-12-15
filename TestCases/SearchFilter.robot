@@ -41,5 +41,8 @@ Loop To get all prices
     Log  ${PricesLeng}
       FOR    ${ItemPriceElement}    IN    @{ItemPriceElements}
               ${eachPrice}=    Get Text    ${ItemPriceElement}
-          Log  ${eachPrice}
+              Log  ${eachPrice}
+            #  Run Keyword If    '${eachPrice}' > '${MinPrice}' and  '${eachPrice}' < '${MaxPrice}'    Log    \Pass
+              Run Keyword If    7 > 3  and   2 < 3    Log    \Pass
+
       END
