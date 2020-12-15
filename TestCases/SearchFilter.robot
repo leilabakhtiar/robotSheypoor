@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+library  Mathhelper.py
 *** Variables ***
 ${MinPrice}    100000
 ${MaxPrice}    200000
@@ -42,7 +43,9 @@ Loop To get all prices
       FOR    ${ItemPriceElement}    IN    @{ItemPriceElements}
               ${eachPrice}=    Get Text    ${ItemPriceElement}
               Log  ${eachPrice}
-              Should Be True  '${eachPrice}'>' ${MinPrice}' and '${eachPrice}'< '${MaxPrice}'
-              
+              # convert farsi to english
+             ${englishNo}=  Evaluate    Mathhelper.getPersianToEnglish(${eachPrice}) modules=Mathhelper
+              Should Be True  '${englishNo}'>' ${MinPrice}' and '${englishNo}'< '${MaxPrice}'
+
 
       END
