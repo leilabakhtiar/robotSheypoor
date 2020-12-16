@@ -44,7 +44,7 @@ Loop To get all prices
               ${eachPrice}=    Get Text    ${ItemPriceElement}
               Log  ${eachPrice}
               # convert farsi to english
-             ${englishNo}=  Evaluate    Mathhelper.getPersianToEnglish(${eachPrice}) modules=Mathhelper
+             ${englishNo}=  Evaluate    expression   Mathhelper.getPersianToEnglish(${eachPrice}) modules=Mathhelper
               Should Be True  '${englishNo}'>' ${MinPrice}' and '${englishNo}'< '${MaxPrice}'
 
 

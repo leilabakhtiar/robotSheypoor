@@ -1,5 +1,6 @@
 from unidecode import unidecode
 
 def getPersianToEnglish(persianNo):
-    a = unidecode(persianNo)
+    Print (persianNo.replace(',',''))
+    a = unidecode(persianNom)
     return a
